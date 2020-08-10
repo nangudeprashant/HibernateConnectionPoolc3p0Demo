@@ -49,21 +49,9 @@ public class HibernateUtil {
 		}
 		return sessionFactory;
 	}
-
 	public static void shutdown() {
 		if (registry != null) {
 			StandardServiceRegistryBuilder.destroy(registry);
 		}
 	}
-
-	/*
-	 * private static final SessionFactory sessionFactory1;
-	 * 
-	 * static { try { sessionFactory1 = new
-	 * AnnotationConfiguration().configure().buildSessionFactory(); } catch
-	 * (Throwable ex) { System.err.println("Initial SessionFactory creation failed."
-	 * + ex); throw new ExceptionInInitializerError(ex); } }
-	 * 
-	 * public static SessionFactory getSessionFactory1() { return sessionFactory1; }
-	 */
 }
